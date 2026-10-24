@@ -114,3 +114,34 @@ Ab 5. Kyu zusätzlich: Tsurikomi-goshi, Sode-tsurikomi-goshi, Harai-goshi, Sasae
 
 ## Quiz-Vokabeln
 Tori = führt die Technik aus; Uke = nimmt die Technik an; Ukemi = Falltechnik; Nage-waza = Wurftechniken; Katame-waza = Bodentechniken; Osaekomi-waza = Haltetechniken; Kansetsu-waza = Hebeltechniken; Shime-waza = Würgetechniken; Randori = freies Üben; Shiai = Wettkampf; Kuzushi = Gleichgewicht brechen; Tsukuri = Wurf vorbereiten/eindrehen; Kake = Wurf ausführen; Hajime = Beginnt!; Matte = Wartet!; Sore-made = Ende des Kampfes; Rei = Gruß; Ippon = voller Punkt; Waza-ari = halbe Wertung; Toketa = Haltegriff gelöst; Ai-yotsu = gleiche Auslage; Kenka-yotsu = gegengleiche Auslage; Dojo = Übungsraum; Judogi = Judoanzug; Obi = Gürtel; Migi = rechts; Hidari = links
+
+## Skills, Agenten & Plugins – Recherche vor Installation
+Bevor mit der Umsetzung begonnen wird bzw. bei neuen Projektabschnitten:
+
+1. Erst im Internet recherchieren, welche Skills, Subagenten und Plugins
+   zum Projekt passen (Tech-Stack, Art der App, typische Anforderungen
+   für so ein Projekt).
+2. Danach eine LISTE schreiben mit:
+   - Name des Skills/Agenten/Plugins
+   - Kurz wofür er gut ist
+   - Warum er für dieses Projekt passt
+3. Diese Liste mir zuerst zeigen und auf Freigabe warten.
+4. ERST NACH meiner Bestätigung installieren/einrichten.
+
+Reihenfolge ist immer: Recherche → Liste zeigen → Freigabe abwarten →
+Installation. Kein Punkt wird übersprungen, auch nicht bei "offensichtlich
+sinnvollen" Skills.
+
+Installiert (freigegeben am 24.10.2026): frontend-design
+(claude-plugins-official, eingetragen in `.claude/settings.json`).
+
+## Fehler-Protokoll (Update-Regel)
+Wenn Claude einen Fehler macht oder etwas korrigiert werden muss, wird das
+hier festgehalten, bevor weitergearbeitet wird. Format für jeden Eintrag:
+
+```
+### [Datum]
+- Was ist passiert: [kurze Beschreibung des Fehlers/Verhaltens]
+- Warum falsch: [z. B. falsche Annahme, falscher Wert, gegen Vorgabe verstoßen]
+- Regel für die Zukunft: [was Claude stattdessen tun soll]
+```
