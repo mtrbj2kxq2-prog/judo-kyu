@@ -1,0 +1,6 @@
+{
+  "name": "judo-kyu-tests",
+  "private": true,
+  "scripts": { "test": "node tests/run.js" },
+  "devDependencies": { "jsdom": "^25.0.0" }
+}

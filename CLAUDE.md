@@ -25,6 +25,12 @@ https://www.judobund.de/fileadmin/user_upload/judobund.de/Downloads/Downloadcent
 ## Format
 - Datum/Uhrzeit immer im deutschen Format (TT.MM.JJJJ, 24h)
 
+## Workflow
+1. Änderungen umsetzen
+2. `npm test` – muss grün sein (einmalig vorher `npm install`)
+3. Bei Änderungen an Dateien im Cache: `CACHE` in `sw.js` hochzählen und `APP_VERSION` in `fehler.js` anpassen
+4. Vor jedem größeren Schritt: kurz Plan zeigen
+
 ## Stand
 Es gibt einen funktionierenden Prototyp als Single-File-HTML (judo-kyu.html). Falls die Datei im Ordner liegt: Daten (Konstanten TECH, BELTS, VOCAB) daraus übernehmen. Sonst aus dieser Übergabe neu aufbauen.
 
