@@ -13,6 +13,24 @@ https://www.judobund.de/fileadmin/user_upload/judobund.de/Downloads/Downloadcent
 - Fortschritt in `localStorage` (pro Gürtel), keine Konten, kein Backend
 - Daten (TECH, BELTS, VOCAB) getrennt von der UI-Logik halten, z. B. in `data.js`
 
+## Fehlerbericht (wie in der Drahtwerk-App fz2-tool)
+- Programmfehler automatisch lokal mitschreiben (`error` / `unhandledrejection`), max. 40 Einträge; der Logger selbst darf nie crashen
+- Fehler-Knopf in der Kopfzeile, wird rot, sobald Fehler erfasst sind
+- Fehlerfenster: Feld „Was stimmt nicht?", optional Foto/Screenshot, automatischer Schnappschuss (Ansicht, gewählter Gürtel, App-Version, Gerät)
+- Senden per E-Mail (fertige Mail), Teilen (z. B. WhatsApp) oder Text kopieren
+- Wochenbericht-Banner, wenn eine Woche vorbei ist und Fehler gesammelt wurden
+- Empfänger: tigga232332@gmail.com (dieselbe Adresse wie fz2-tool)
+- Kein Benutzername/Login – die App hat keine Konten
+
+## Format
+- Datum/Uhrzeit immer im deutschen Format (TT.MM.JJJJ, 24h)
+
+## Workflow
+1. Änderungen umsetzen
+2. `npm test` – muss grün sein (einmalig vorher `npm install`)
+3. Bei Änderungen an Dateien im Cache: `CACHE` in `sw.js` hochzählen und `APP_VERSION` in `fehler.js` anpassen
+4. Vor jedem größeren Schritt: kurz Plan zeigen
+
 ## Stand
 Es gibt einen funktionierenden Prototyp als Single-File-HTML (judo-kyu.html). Falls die Datei im Ordner liegt: Daten (Konstanten TECH, BELTS, VOCAB) daraus übernehmen. Sonst aus dieser Übergabe neu aufbauen.
 
@@ -114,3 +132,34 @@ Ab 5. Kyu zusätzlich: Tsurikomi-goshi, Sode-tsurikomi-goshi, Harai-goshi, Sasae
 
 ## Quiz-Vokabeln
 Tori = führt die Technik aus; Uke = nimmt die Technik an; Ukemi = Falltechnik; Nage-waza = Wurftechniken; Katame-waza = Bodentechniken; Osaekomi-waza = Haltetechniken; Kansetsu-waza = Hebeltechniken; Shime-waza = Würgetechniken; Randori = freies Üben; Shiai = Wettkampf; Kuzushi = Gleichgewicht brechen; Tsukuri = Wurf vorbereiten/eindrehen; Kake = Wurf ausführen; Hajime = Beginnt!; Matte = Wartet!; Sore-made = Ende des Kampfes; Rei = Gruß; Ippon = voller Punkt; Waza-ari = halbe Wertung; Toketa = Haltegriff gelöst; Ai-yotsu = gleiche Auslage; Kenka-yotsu = gegengleiche Auslage; Dojo = Übungsraum; Judogi = Judoanzug; Obi = Gürtel; Migi = rechts; Hidari = links
+
+## Skills, Agenten & Plugins – Recherche vor Installation
+Bevor mit der Umsetzung begonnen wird bzw. bei neuen Projektabschnitten:
+
+1. Erst im Internet recherchieren, welche Skills, Subagenten und Plugins
+   zum Projekt passen (Tech-Stack, Art der App, typische Anforderungen
+   für so ein Projekt).
+2. Danach eine LISTE schreiben mit:
+   - Name des Skills/Agenten/Plugins
+   - Kurz wofür er gut ist
+   - Warum er für dieses Projekt passt
+3. Diese Liste mir zuerst zeigen und auf Freigabe warten.
+4. ERST NACH meiner Bestätigung installieren/einrichten.
+
+Reihenfolge ist immer: Recherche → Liste zeigen → Freigabe abwarten →
+Installation. Kein Punkt wird übersprungen, auch nicht bei "offensichtlich
+sinnvollen" Skills.
+
+Installiert (freigegeben am 24.10.2026): frontend-design
+(claude-plugins-official, eingetragen in `.claude/settings.json`).
+
+## Fehler-Protokoll (Update-Regel)
+Wenn Claude einen Fehler macht oder etwas korrigiert werden muss, wird das
+hier festgehalten, bevor weitergearbeitet wird. Format für jeden Eintrag:
+
+```
+### [Datum]
+- Was ist passiert: [kurze Beschreibung des Fehlers/Verhaltens]
+- Warum falsch: [z. B. falsche Annahme, falscher Wert, gegen Vorgabe verstoßen]
+- Regel für die Zukunft: [was Claude stattdessen tun soll]
+```

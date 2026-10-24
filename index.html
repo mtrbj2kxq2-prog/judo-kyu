@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Judo Kyu-Prüfung</title>
+<meta name="description" content="Prüfungsinhalte der Kyu-Grade im DJB lernen, abhaken und im Quiz üben.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Judo Kyu">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1D2B45">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="kopf">
+  <h1 id="kopf-titel">Kyu-Prüfung</h1>
+  <button id="thema-knopf" class="kopf-knopf" type="button" aria-label="Farbmodus wechseln">◐</button>
+  <button id="fehler-knopf" class="kopf-knopf" type="button">Fehler melden</button>
+</header>
+
+<button id="wochen-banner" type="button" hidden></button>
+
+<main id="inhalt"><!-- wird per JS gefüllt --></main>
+
+<nav id="tabs" aria-label="Bereiche">
+  <button class="tab" type="button" data-view="start">Gürtel</button>
+  <button class="tab" type="button" data-view="quiz">Quiz</button>
+</nav>
+
+<script src="data.js"></script>
+<script src="logik.js"></script>
+<script src="fehler.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
