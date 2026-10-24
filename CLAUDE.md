@@ -13,6 +13,18 @@ https://www.judobund.de/fileadmin/user_upload/judobund.de/Downloads/Downloadcent
 - Fortschritt in `localStorage` (pro Gürtel), keine Konten, kein Backend
 - Daten (TECH, BELTS, VOCAB) getrennt von der UI-Logik halten, z. B. in `data.js`
 
+## Fehlerbericht (wie in der Drahtwerk-App fz2-tool)
+- Programmfehler automatisch lokal mitschreiben (`error` / `unhandledrejection`), max. 40 Einträge; der Logger selbst darf nie crashen
+- Fehler-Knopf in der Kopfzeile, wird rot, sobald Fehler erfasst sind
+- Fehlerfenster: Feld „Was stimmt nicht?", optional Foto/Screenshot, automatischer Schnappschuss (Ansicht, gewählter Gürtel, App-Version, Gerät)
+- Senden per E-Mail (fertige Mail), Teilen (z. B. WhatsApp) oder Text kopieren
+- Wochenbericht-Banner, wenn eine Woche vorbei ist und Fehler gesammelt wurden
+- Empfänger: tigga232332@gmail.com (dieselbe Adresse wie fz2-tool)
+- Kein Benutzername/Login – die App hat keine Konten
+
+## Format
+- Datum/Uhrzeit immer im deutschen Format (TT.MM.JJJJ, 24h)
+
 ## Stand
 Es gibt einen funktionierenden Prototyp als Single-File-HTML (judo-kyu.html). Falls die Datei im Ordner liegt: Daten (Konstanten TECH, BELTS, VOCAB) daraus übernehmen. Sonst aus dieser Übergabe neu aufbauen.
 
